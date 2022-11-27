@@ -3,7 +3,7 @@ import leafmap.foliumap as leafmap
 
 
 def app():
-    st.title("Home")
+    st.title("Sequias Agrometeorológicas")
 
     st.markdown(
         """
@@ -13,6 +13,7 @@ def app():
 
     """
     )
+    
 
     m = leafmap.Map(locate_control=True)
     m.add_basemap("ROADMAP")
