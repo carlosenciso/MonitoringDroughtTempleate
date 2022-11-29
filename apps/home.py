@@ -5,7 +5,7 @@ import geemap.foliumap as geemap
 import geopandas as gpd
 import datetime
 import geemap.colormaps as cm
-ee.Initizalize()
+ee.Initialize()
 
 
 class indicesGEE:
