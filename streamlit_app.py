@@ -36,11 +36,10 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        This web [app](https://share.streamlit.io/giswqs/streamlit-template) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-            [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
+        Este repositorio web [app](https://carlosenciso-monitoringdroughttempleate-streamlit-app-huiz8l.streamlit.app/) es gestionado 
+        por [Carlos Enciso Ojeda](https://github.com/carlosenciso). Puede seguir mas publicaciones:
+        [GitHub](https://github.com/carlosenciso) | [Twitter](https://mobile.twitter.com/ojeda_enciso_o) | [Gitlab](https://gitlab.com/cenciso) | [LinkedIn](https://www.linkedin.com/in/carlos-enciso-ojeda-63449998/).
         
-        Source code: <https://github.com/giswqs/streamlit-template>
-
         More menu icons: <https://icons.getbootstrap.com>
     """
     )
