@@ -7,7 +7,6 @@
 # export C_INCLUDE_PATH=/usr/include/gdal
 # gdal-config --version
 # pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') localtileserver
-/home/appuser/venv/bin/python -m pip install --upgrade pip
 mkdir -p ~/.streamlit/
 echo "\
 [server]\n\
@@ -16,3 +15,7 @@ port = $PORT\n\
 enableCORS = false\n\
 \n\
 " > ~/.streamlit/config.toml
+#--News --#
+sed -i '' 's/[~=]=/>=/' requirements.txt
+pip install -U -r requirements.txt
+pip freeze | sed 's/==/~=/' > requirements.txt
