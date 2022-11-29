@@ -15,7 +15,3 @@ port = $PORT\n\
 enableCORS = false\n\
 \n\
 " > ~/.streamlit/config.toml
-#--News --#
-sed -i '' 's/[~=]=/>=/' requirements.txt
-pip install -U -r requirements.txt
-pip freeze | sed 's/==/~=/' > requirements.txt
