@@ -7,7 +7,7 @@
 # export C_INCLUDE_PATH=/usr/include/gdal
 # gdal-config --version
 # pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') localtileserver
-pip install --upgrade --force-reinstall -r requirements.txt
+/home/appuser/venv/bin/python -m pip install --upgrade pip
 mkdir -p ~/.streamlit/
 echo "\
 [server]\n\
