@@ -1,5 +1,5 @@
 --find-links=https://girder.github.io/large_image_wheels GDAL
-protobuf~=4.21.2
+#protobuf~=4.21.2
 geemap
 geopandas
 jupyter-server-proxy
@@ -11,5 +11,5 @@ streamlit
 streamlit-option-menu
 streamlit-folium
 streamlit-keplergl
-git+https://github.com/giswqs/leafmap
-git+https://github.com/giswqs/geemap
+#git+https://github.com/giswqs/leafmap
+#git+https://github.com/giswqs/geemap
