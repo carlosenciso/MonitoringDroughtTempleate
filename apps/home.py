@@ -82,15 +82,15 @@ class indicesGEE:
         arr = lst.aggregate_array('system:time_start')
         dates = arr.map(lambda x: ee.Date(x).format('YYYY-MM-dd'))
         eeDates = [ee.Date(x) for x in dates.getInfo()]
-        # -- Compute VCI --#
+        # -- Compute --#
         self.tci = ee.ImageCollection([
             lst.filter(ee.Filter.calendarRange(
                 x.get('year'), x.get('year'), 'year'))
             .filter(ee.Filter.calendarRange(x.get('month'), x.get('month'), 'month'))
             .filter(ee.Filter.calendarRange(x.get('day'), x.get('day'), 'day_of_month')).median()
-            .subtract(lstCollect.filter(ee.Filter.calendarRange(x.get('month'), x.get('month'), 'month')).min())
+            .subtract(lstCollect.filter(ee.Filter.calendarRange(x.get('month'), x.get('month'), 'month')).max())
             .divide(lstCollect.filter(ee.Filter.calendarRange(x.get('month'), x.get('month'), 'month')).max()
-                    .subtract(lstCollect.filter(ee.Filter.calendarRange(x.get('month'), x.get('month'), 'month')).min())).multiply(1e2)
+                    .subtract(lstCollect.filter(ee.Filter.calendarRange(x.get('month'), x.get('month'), 'month')).min())).multiply(-1e2)
             .set({"system:time_start": ee.Date.fromYMD(x.get('year'), x.get('month'), x.get('day'))})
             for x in eeDates]).median().rename('TCI')
     # -- Compute VHI --#
