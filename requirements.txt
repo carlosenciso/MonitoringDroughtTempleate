@@ -1,9 +1,9 @@
-#--find-links=https://girder.github.io/large_image_wheels GDAL
-geemap
+--find-links=https://girder.github.io/large_image_wheels GDAL
+#geemap
 geopandas
 jupyter-server-proxy
 keplergl
-leafmap
+#leafmap
 localtileserver
 nbserverproxy
 streamlit
